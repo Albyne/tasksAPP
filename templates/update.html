@@ -1,0 +1,45 @@
+{{ define "update" }}
+
+{{  template "header"}}
+
+<br>
+<br>
+<div class="card">
+    <div class="card-header">
+        <h3 text-center>Tareas</h3>
+    </div>
+    <div class="card-body">
+       <form action="/update" method="post">
+           <input type="hidden"  class="form-control" name="id" value="{{.Id}}" id="id">
+             <div class="form-group">
+               <label for="">Nombre:</label>
+               <input type="text"
+                 class="form-control" name="name" id="name" value="{{.Name}}" aria-desciberdby="helpId" placeholder="">
+               <small id="helpId" class="form-text text-muted">Ingresa el nombre de la tarea</small>
+             </div>
+             <div class="form-group">
+               <label for="">Descripcion:</label>
+               <input class="form-control" name="description" id="description" value="{{.Description}}" aria-desciberdby="helpId"  >
+              
+
+              
+              
+               <small id="helpId" class="form-text text-muted">Describa la tarea</small>
+             </div>
+           
+             <button type="submit" class="btn btn-success">Modificar Tarea</button>
+             <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+       </form>
+    </div>
+   
+</div>
+
+<br>
+<br>
+
+
+
+
+{{template "footer" }}
+
+{{ end }}

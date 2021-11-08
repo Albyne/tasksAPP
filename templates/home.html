@@ -1,0 +1,37 @@
+
+{{ define "home" }}
+
+{{ template "header" }}
+
+<br>
+<br>
+
+<div class="row">
+  {{ range . }}
+  <div class="col-lg-4 col-md-4 mb-4">
+    <div class="card-section border rounded ml-4 mr-4">
+      <div class="card-header card-header-second rounded">
+        <h4 class="card-header-title text-center pt-3">{{ .Name }}</h4>
+        </div>
+       
+      <div class="card-body text-center">     
+        
+        <p class="text-center"> {{ .Description }} </p>
+       <br>   
+       <a name="" id="" class="btn btn-secondary" href="/edit?id={{.Id}}" role="button">Editar</a>
+       <a name="" id="" class="btn btn-danger" href="/delete?id={{.Id}}" role="button">Borrar</a>
+      </div>
+    </div>
+  
+  </div>
+  
+  {{ end }}
+</div>
+  
+
+<br>
+<br>
+
+
+{{ template "footer" }}
+ {{ end }}
